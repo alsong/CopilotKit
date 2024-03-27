@@ -15,6 +15,7 @@ import {
 import { resetGlobalAudio, speak } from "../utils";
 import { ActionButton } from "./ActionButton";
 import { SlideModel, Slide } from "./Slide";
+import Link from "next/link";
 
 export const Presentation = ({ chatInProgress }: { chatInProgress: boolean }) => {
   const [slides, setSlides] = useState<SlideModel[]>([
@@ -93,6 +94,7 @@ export const Presentation = ({ chatInProgress }: { chatInProgress: boolean }) =>
   return (
     <div className="relative">
       <Slide slide={currentSlide} partialUpdateSlide={updateCurrentSlide} />
+      <Link href="/">Home</Link>
 
       {/* Add the action buttons below */}
       <div className="absolute top-0 left-0 mt-6 ml-4 z-30">

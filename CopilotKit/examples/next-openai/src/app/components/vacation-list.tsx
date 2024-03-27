@@ -5,6 +5,7 @@ import { useState } from "react";
 import { DestinationTable } from "./destination-table";
 import { VacationNotes } from "./vacation-notes";
 import { useMakeCopilotDocumentReadable, DocumentPointer } from "@copilotkit/react-core";
+import Link from "next/link";
 
 export type Destination = {
   name: string;
@@ -43,6 +44,7 @@ export function VacationList() {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-3xl font-semibold leading-6 text-gray-900">WaterBnB (Toy Example)</h1>
+          <Link href="/presentation">Presentation</Link>
         </div>
       </div>
       <div className="mt-8 flow-root bg-slate-200">
